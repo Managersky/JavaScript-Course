@@ -20,6 +20,38 @@ function movingImage(e, objToMove)
     objToMove.style.top = e.clientY - objToMove.height / 2 + "px";
 }
 
+function stopWatch(uchwytStopera, liczba) 
+{
+    uchwytStopera.innerHTML = liczba--;
+
+    if (liczba < 0)
+        return;
+
+    timeOutStoper = setTimeout(function () 
+    {
+        stopWatch(uchwytStopera, liczba);
+    }, 1000);
+    
+    return timeOutStoper;
+}
+
+function stopWatchInterval(uchwytStopera, liczba)
+{
+    var timeIntervalReference = setInterval(function()
+    {
+        if (liczba <= 0)
+        {
+            clearInterval(timeIntervalReference);
+            return;
+        }
+            
+        uchwytStopera.innerHTML = --liczba;
+    }, 1000);
+    return timeIntervalReference;
+}
+
+var timeOutStoper;
+
 window.onload = function() 
 {
     // Scroll on top
@@ -67,5 +99,44 @@ window.onload = function()
     {
         e.preventDefault();
     }
+
+    // Funkcje wykonywane po czasie
+
+    var poczatkowaWartosc = document.getElementById("poczatkowaWartosc").value;
+    var stoperStart = document.getElementById("stoperStart");
+    var stoperStop = document.getElementById("stoperStop");
+    var uchwytStopera = document.getElementById("uchwytStopera");
+
+    var timeIntervalReference;
+    stoperStart.onclick = function()
+    {
+        var poczatkowaWartosc = document.getElementById("poczatkowaWartosc").value;
+
+        uchwytStopera.innerHTML = poczatkowaWartosc;
+        timeIntervalReference = stopWatchInterval(uchwytStopera, poczatkowaWartosc);
+    };
+
+    stoperStop.onclick = function ()
+    {
+        clearInterval(timeIntervalReference);
+    }
+    
+    // // Metoda z SetTimeout
+    // stoperStart.onclick = function()
+    // {
+    //     var poczatkowaWartosc = document.getElementById("poczatkowaWartosc").value;
+        
+    //     uchwytStopera.innerHTML = poczatkowaWartosc;
+
+    //     if(timeOutStoper)
+    //         clearTimeout(timeOutStoper);
+
+    //     timeOutStoper = stopWatch(uchwytStopera, poczatkowaWartosc);
+    // };
+
+    // stoperStop.onclick = function()
+    // {
+    //     clearTimeout(timeOutStoper);
+    // };
 };
 
