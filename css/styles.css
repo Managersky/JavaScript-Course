@@ -1,11 +1,3 @@
-#plus {
-    color: green;
-}
-
-#minus {
-    color: red;
-}
-
 .zwiekszCzcionke {
     font-size: 125%;
 }
@@ -28,4 +20,13 @@
 
 #toTopButton:hover {
     color: aqua;
+}
+
+img {
+    width: 10%;
+    height: 8%;
+}
+
+#obrazek {
+    position: absolute;
 }

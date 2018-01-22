@@ -1,69 +1,28 @@
-// /*
+// Pomniejsz/zwiększ czcionkę
 
-// arguments Object 
+var tekst = document.getElementById("tekst");
+var plus = document.getElementById("plus");
+var minus = document.getElementById("minus");
 
-// */
+plus.onclick = function() 
+{
+    tekst.className = "zwiekszCzcionke";
+}
 
-// function addNumbers() 
-// {   
-//     var suma = 0;
-    
-//     /*for (i = 0; i < arguments.length; i++)
-//     {
-//         suma += arguments[i];
-//     }
-//     */
+minus.onclick = function() 
+{
+    tekst.className = "zmniejszCzcionke";
+}
 
-//     for (var property in arguments)
-//     {
-//         suma += arguments[property];
-//     }
-//     return suma;
-// }
-
-// var suma = addNumbers(3,4,7,6,6);
-
-// alert(suma);
-
-/*
-    pętla w pętli - tabliczka mnożenia ćwiczenie
- */
-
-// var tabliczkaMnozenia ="<table>";
-
-// for (var i = 0; i <= 10; i++)
-// {   
-//     tabliczkaMnozenia += "<tr>";
-
-//     for (var j = 0; j <= 10; j++)
-//     {
-//         tabliczkaMnozenia += "<td>" + i * j + "</td>";
-//     }
-//     tabliczkaMnozenia += "</tr>";
-// }
-
-// tabliczkaMnozenia += "</table>";
-
-// var rezultat = document.getElementById("rezultat");
-
-// rezultat.innerHTML = tabliczkaMnozenia;
-
-// var tekst = document.getElementById("tekst");
-// var plus = document.getElementById("plus");
-// var minus = document.getElementById("minus");
-
-// plus.onclick = function() 
-// {
-//     tekst.className = "zwiekszCzcionke";
-// }
-
-// minus.onclick = function() 
-// {
-//     tekst.className = "zmniejszCzcionke";
-// }
+function movingImage(e, objToMove)
+{
+    objToMove.style.left = e.clientX - objToMove.width / 2 + "px";
+    objToMove.style.top = e.clientY - objToMove.height / 2 + "px";
+}
 
 window.onload = function() 
 {
+    // Scroll on top
     var toTopButton = document.getElementById("toTopButton");
 
     window.onscroll = function() 
@@ -85,4 +44,28 @@ window.onload = function()
     {
         window.scrollBy(0, -1 * window.pageYOffset)
     };
+
+    // Przesuwanie obrazka po kliknięciu i przytrzymaniu myszką
+
+    var obrazek = document.getElementById("obrazek");
+
+    obrazek.onmousedown = function()
+    {
+        var self = this;
+        document.onmousemove = function(e)
+        {
+            movingImage(e, self);
+        };
+    };
+    
+    obrazek.onmouseup = function()
+    {
+        document.onmousemove = null;
+    };
+
+    obrazek.ondragstart = function(e)
+    {
+        e.preventDefault();
+    }
 };
+
