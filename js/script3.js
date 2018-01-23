@@ -17,4 +17,12 @@ window.onload = function () {
         e.preventDefault();
     };
 
+    for (var i = 0; i < myForm.akceptacjaRegulaminu.length; i++)
+    {
+        myForm.akceptacjaRegulaminu[i].onclick = function()
+        {
+            submitButton.disabled = (this.value === "true");
+        };
+        
+    };
 };
