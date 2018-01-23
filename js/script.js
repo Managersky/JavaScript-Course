@@ -1,142 +1,76 @@
-// Pomniejsz/zwiększ czcionkę
 
-var tekst = document.getElementById("tekst");
-var plus = document.getElementById("plus");
-var minus = document.getElementById("minus");
-
-plus.onclick = function() 
+function stopWatch(uchwytStopera, daneStop)
 {
-    tekst.className = "zwiekszCzcionke";
-}
+    this.uchwytStopera = uchwytStopera;
+    this.daneStop = daneStop;
 
-minus.onclick = function() 
-{
-    tekst.className = "zmniejszCzcionke";
-}
-
-function movingImage(e, objToMove)
-{
-    objToMove.style.left = e.clientX - objToMove.width / 2 + "px";
-    objToMove.style.top = e.clientY - objToMove.height / 2 + "px";
-}
-
-function stopWatch(uchwytStopera, liczba) 
-{
-    uchwytStopera.innerHTML = liczba--;
-
-    if (liczba < 0)
-        return;
-
-    timeOutStoper = setTimeout(function () 
+    this.poczatkowaWartosc;
+    this.timeOutReference = undefined;
+    this.odpal = function (poczatkowaWartosc)
     {
-        stopWatch(uchwytStopera, liczba);
-    }, 1000);
-    
-    return timeOutStoper;
-}
+        this.poczatkowaWartosc = poczatkowaWartosc;
 
-function stopWatchInterval(uchwytStopera, liczba)
-{
-    var timeIntervalReference = setInterval(function()
+        if (this.timeOutReference)
+            this.zatrzymaj();
+
+        this.startStoper();
+    };
+
+    this.startStoper = function()
     {
-        if (liczba <= 0)
-        {
-            clearInterval(timeIntervalReference);
+        if (this.poczatkowaWartosc < 0)
             return;
-        }
-            
-        uchwytStopera.innerHTML = --liczba;
-    }, 1000);
-    return timeIntervalReference;
+        this.uchwytStopera.innerHTML = this.poczatkowaWartosc--;
+
+        var self = this;
+
+        this.timeOutReference = setTimeout(function()
+            {
+                self.startStoper();
+            }, 1000);
+    };
+
+    this.zatrzymaj = function ()
+    {
+        clearTimeout(this.timeOutReference);
+        this.daneStop.innerHTML += this.uchwytStopera.innerHTML + " ";
+    };
+
+    this.kontynuuj = function()
+    {
+        this.startStoper();
+    };
+
 }
 
-var timeOutStoper;
 
 window.onload = function() 
 {
-    // Scroll on top
-    var toTopButton = document.getElementById("toTopButton");
+    // Stoper obiektowo
 
-    window.onscroll = function() 
-    {
-        var test = document.getElementById("test");
-        var toTopButton = document.getElementById("toTopButton");
+    var btnStoperStart = document.getElementById("btnStoperStart");
+    var btnStoperStop = document.getElementById("btnStoperStop");
+    var btnStoperContinue = document.getElementById("btnStoperContinue");
 
-        var yScrollAxis = window.pageYOffset;
-
-        if (yScrollAxis > 200)
-            toTopButton.style.display = "block";
-        else
-            toTopButton.style.display = "none";
-
-        test.innerHTML = yScrollAxis;
-    };
-
-    toTopButton.onclick =  function()
-    {
-        window.scrollBy(0, -1 * window.pageYOffset)
-    };
-
-    // Przesuwanie obrazka po kliknięciu i przytrzymaniu myszką
-
-    var obrazek = document.getElementById("obrazek");
-
-    obrazek.onmousedown = function()
-    {
-        var self = this;
-        document.onmousemove = function(e)
-        {
-            movingImage(e, self);
-        };
-    };
-    
-    obrazek.onmouseup = function()
-    {
-        document.onmousemove = null;
-    };
-
-    obrazek.ondragstart = function(e)
-    {
-        e.preventDefault();
-    }
-
-    // Funkcje wykonywane po czasie
-
-    var poczatkowaWartosc = document.getElementById("poczatkowaWartosc").value;
-    var stoperStart = document.getElementById("stoperStart");
-    var stoperStop = document.getElementById("stoperStop");
     var uchwytStopera = document.getElementById("uchwytStopera");
+    var daneStop = document.getElementById("daneStop");
 
-    var timeIntervalReference;
-    stoperStart.onclick = function()
+    var stoper = new stopWatch(uchwytStopera, daneStop);
+
+    btnStoperStart.onclick = function ()
     {
         var poczatkowaWartosc = document.getElementById("poczatkowaWartosc").value;
-
-        uchwytStopera.innerHTML = poczatkowaWartosc;
-        timeIntervalReference = stopWatchInterval(uchwytStopera, poczatkowaWartosc);
+        stoper.odpal(poczatkowaWartosc);
     };
 
-    stoperStop.onclick = function ()
+    btnStoperStop.onclick = function ()
+    { 
+        stoper.zatrzymaj();
+    };
+
+    btnStoperContinue.onclick = function()
     {
-        clearInterval(timeIntervalReference);
-    }
-    
-    // // Metoda z SetTimeout
-    // stoperStart.onclick = function()
-    // {
-    //     var poczatkowaWartosc = document.getElementById("poczatkowaWartosc").value;
-        
-    //     uchwytStopera.innerHTML = poczatkowaWartosc;
-
-    //     if(timeOutStoper)
-    //         clearTimeout(timeOutStoper);
-
-    //     timeOutStoper = stopWatch(uchwytStopera, poczatkowaWartosc);
-    // };
-
-    // stoperStop.onclick = function()
-    // {
-    //     clearTimeout(timeOutStoper);
-    // };
+        stoper.kontynuuj();
+    };
 };
 
