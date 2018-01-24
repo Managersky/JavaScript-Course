@@ -1,0 +1,92 @@
+/* Reset default browser CSS */
+
+/* @import url(reset.css); */
+
+/* General styles */
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.panel {
+    min-width: 700px;
+    border: 1px solid rgb(204, 201, 201);
+    border-radius: 5px; 
+    margin: 10px auto;
+}
+
+/* Add Task to List */
+
+.panel-main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    min-height: 125px;
+}
+
+.panel-main .panel-heading {
+    background-color: gray;
+    width: 100%;
+
+}
+
+.panel-main .panel-heading h2 {
+    margin-left: 5%;
+}
+
+.panel-main .panel-addTask {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 50px;
+}
+
+.panel-addTask__input {
+    width: 80%;
+}
+
+/* To Do List */
+
+.panel-toDoList {
+    display: flex;
+    justify-content: center;
+}
+
+.panel-toDoList .toDoItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 60px;
+}
+
+/* Filters buttons */
+
+.panel-filters {
+    display: flex;
+    justify-content: center;
+}
+
+.panel-filters-btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    height: 60px;
+}
+
+.panel-filters-btn .btn {
+    margin-right: 10px;
+    width: 90px;
+}
