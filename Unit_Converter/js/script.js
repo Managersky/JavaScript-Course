@@ -9,29 +9,26 @@ function meters(entryValue)
     return entryValue.value * 100;
 };
 
-function optionChosen(units)
+function optionChosen()
 {
-    var unitChosen = units.onchange = function()
-    {
-        units.options[units.selectedIndex].value;
-    }
-    return unitChosen;
+    var units = document.getElementById("units");
+    return units.options[units.selectedIndex].innerHTML;
 };
     
     var entryValue = document.getElementById("entryValue");
     var convertedValue = document.getElementById("convertedValue");
 
-    var units = document.getElementById("units");
-
     var converterButton = document.getElementById("converterButton");
-
+ 
     converterButton.onclick = function() 
     {  
-        if (unitChosen == 0)
-            convertedValue.innerText = kilometers(entryValue) + " cm";
-        else if (unitChosen == 1)
+        if (optionChosen() == "km")
         {
-            convertedValue.innerText = meters(entryValue) + " cm";
+            convertedValue.innerHTML = kilometers(entryValue) + " cm";
+        }
+        else if (optionChosen() == "m")
+        {
+            convertedValue.innerHTML = meters(entryValue) + " cm";
         }
     };
 
