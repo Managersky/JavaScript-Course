@@ -1,4 +1,6 @@
 
+
+/* Units */
 function kilometers(entryValue)
 {
     return entryValue.value * 1000;
@@ -9,11 +11,18 @@ function meters(entryValue)
     return entryValue.value * 100;
 };
 
+// Option choose
 function optionChosen()
 {
     var units = document.getElementById("units");
     return units.options[units.selectedIndex].innerHTML;
 };
+
+// is a Number?
+function isNumber(valueToCheck)
+{
+    return !isNaN(valueToCheck);
+}
     
     var entryValue = document.getElementById("entryValue");
     var convertedValue = document.getElementById("convertedValue");
@@ -22,13 +31,21 @@ function optionChosen()
  
     converterButton.onclick = function() 
     {  
-        if (optionChosen() == "km")
+        if (entryValue.value == 0)
         {
-            convertedValue.innerHTML = kilometers(entryValue) + " cm";
+            alert("Fill label!");
         }
-        else if (optionChosen() == "m")
+        else if (!isNumber(entryValue.value))
         {
-            convertedValue.innerHTML = meters(entryValue) + " cm";
+            alert("This is not a number! Please write a number");
         }
+        else
+        {
+            if (optionChosen() == "km") {
+                convertedValue.innerHTML = kilometers(entryValue) + " cm";
+            } else if (optionChosen() == "m") {
+                convertedValue.innerHTML = meters(entryValue) + " cm";
+            }
+        }   
     };
 
