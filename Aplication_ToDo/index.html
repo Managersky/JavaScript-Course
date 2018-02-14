@@ -1,51 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>To Do aplication</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/ToDoView.js"></script>
-    <script src="js/ToDo.js"></script>
-    <script src="js/ToDoRenderer.js"></script>
-</head>
-<body>
-    <div class="wrapper">
-        <header>
-            <h1>To Do Aplication</h1>
-        </header>
-        <main>
-            <div class="panel panel-main">
-                <div class="panel-heading">
-                    <h2>Add new task</h2>
-                </div>
-                <div class="panel-addTask">
-                    <input class="panel-addTask__input" name="addTask" type="text" placeholder="Add new task">
-                    <button class="panel-addTask__button panel-addTask__button--disabled" name="addTaskButton">Add</button>
-                </div>
-            </div>
-            <div class="panel panel-toDoList">
-                <!-- <div class="toDoItem">
-                    <div class="toDoDescription">
-                        <p>Temporary test task</p>
-                    </div>
-                    <label><input type="checkbox">Ready</label>
-                    <button class="toDoItem__button" name="removeTaskButton">Delete</button>
-                </div> -->
-                <div id="toDo-list-root">
+<!doctype html>
+<html lang="pl">
 
-                </div>
+<head>
+    <meta charset="utf-8">
+    <title>TODO</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <section class="todo-list-cnt">
+        <header class="todo-list-header">
+            <h2 class="todo-list-title">
+                Lista zadań
+            </h2>
+            <form class="todo-list-search-form">
+                <input type="search" id="todoSearch" class="todo-list-search">
+             </form>
+        </header>
+
+        <div class="todo-list" id="todoList">
+            <div class="todo-element">
+    <div class="todo-element-bar">
+        <h3 class="todo-element-date">20-10-2016 godz. 16:32</h3>
+        <button class="todo-element-delete" title="Usuń task">
+            <i class="fas fa-times-circle"></i>
+        </button>
+    </div>
+    <div class="todo-element-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio laudantium quasi blanditiis enim molestias explicabo id totam veniam corporis maiores.
+    </div>
+        </div>
+    </section>
+
+    <div class="todo-cnt">
+        <form method="POST" action="#" class="todo-form" id="todoForm">
+            <div class="todo-form-row">
+                <label class="todo-form-label" for="todoMessage">Podaj treść zadania</label>
+                <textarea class="todo-form-message" name="todoMessage" id="todoMessage"></textarea>
             </div>
-            <div class="panel panel-filters">
-                <div class="panel-filters-btn">
-                    <button class="btn btn-primary" name="btnAllTasks">All</button>
-                    <button class="btn btn-default" name="btnReadyTask">Ready</button>
-                    <button class="btn btn-default" name="btnNoReadytask">Not ready</button>
-                </div> 
+            <div class="todo-form-row">
+                <button type="submit" class="button todo-form-button">Dodaj</button>
             </div>
-        </main>
-        <footer>stopka</footer>
-    </div>  
+        </form>
+    </div>
+
+
+
+    <script src="js/script.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
 </body>
+
 </html>

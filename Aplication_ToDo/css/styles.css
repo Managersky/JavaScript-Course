@@ -1,92 +1,133 @@
-/* Reset default browser CSS */
-
-/* @import url(reset.css); */
-
-/* General styles */
-
-.wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+* {
+    box-sizing: border-box;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+body {
+    background: #fafafa;
 }
 
-.panel {
-    min-width: 700px;
-    border: 1px solid rgb(204, 201, 201);
-    border-radius: 5px; 
-    margin: 10px auto;
+.todo-cnt {
+    max-width: 60rem;
+    margin: 0 auto;
 }
 
-/* Add Task to List */
-
-.panel-main {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    min-height: 125px;
+.todo-form {
+    font-family: sans-serif;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    background: #fff;
 }
 
-.panel-main .panel-heading {
-    background-color: gray;
+.todo-form-row {
+    overflow: hidden;
+}
+
+.todo-form-label {
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.todo-form-message {
+    padding: 1rem;
+    height: 10rem;
     width: 100%;
-
+    border: 1px solid #ddd;
+    margin-bottom: 0.5rem;
+    resize: vertical;
+    font-family: sans-serif;
 }
 
-.panel-main .panel-heading h2 {
-    margin-left: 5%;
+.todo-form-button {
+    padding: 0.8rem 1.6rem;
+    background: #F15C5C;
+    color: #fff;
+    border: 0;
+    border-radius: 0.188rem;
+    transition: 0.4s all;
+    cursor: pointer;
+    float: right;
 }
 
-.panel-main .panel-addTask {
+.todo-form-button:hover {
+    background: #ED2D2D;
+}
+
+.todo-list-cnt {
+    background: #fff;
+    font-family: sans-serif;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    padding: 1rem 2rem;
+}
+
+.todo-list-header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    width: 90%;
-    height: 50px;
-}
-
-.panel-addTask__input {
-    width: 80%;
-}
-
-/* To Do List */
-
-.panel-toDoList {
-    display: flex;
-    justify-content: center;
-}
-
-.panel-toDoList .toDoItem {
-    display: flex;
     align-items: center;
+}
+
+.todo-list-search-form {
+    width: 50%;
+}
+
+.todo-list-search {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.todo-list-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.todo-element {
+    border-top: 1px solid #ddd;
+    margin-top: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.todo-element-bar {
+    overflow: hidden;
+    display: flex;
     justify-content: space-between;
-    width: 90%;
-    height: 60px;
-}
-
-/* Filters buttons */
-
-.panel-filters {
-    display: flex;
-    justify-content: center;
-}
-
-.panel-filters-btn {
-    display: flex;
-    justify-content: flex-start;
     align-items: center;
-    width: 90%;
-    height: 60px;
+    margin-bottom: 0.75rem;
 }
 
-.panel-filters-btn .btn {
-    margin-right: 10px;
-    width: 90px;
+.todo-element-date {
+    margin: 0;
+}
+
+.todo-element-date {
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.todo-element-delete {
+    color: #F15C5C;
+    border: 0;
+    font-size: 1rem;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    transition: 0.4s all;
+}
+
+.todo-element-delete svg {
+    pointer-events: none;
+    /* nie chcemy obsługi kliknięć na elementy svg - bo takie dodaje użyty fontAwesome */
+}
+
+.todo-element-delete:hover {
+    color: #ED2D2D;
+}
+
+.todo-element-text {
+    color: #777;
+    font-size: 0.8rem;
 }
