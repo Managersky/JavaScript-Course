@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://kursjs.pl/kurs/events/events-test3.html -->
+<html lang="pl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title></title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: #fafafa;
+        }
+        .elements-list,
+        .add-element-bar {
+            max-width:800px;
+            margin:10px auto;
+        }
+        .btn,
+        .delete {
+            background: #F15C5C;
+            color:#fff;
+            border:0;
+            padding:5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .add-element {
+            padding:10px 20px;
+            font-size:1.1rem;
+        }
+
+        .element {
+            position: relative;
+            background: #fff;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            margin-bottom:20px;
+            padding:20px;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style></head>
+    
+    <body>
+        <div class="elements-list">
+
+        <div class="element">To jest jakiś element 3<button class="delete">Usuń</button></div><div class="element">To jest jakiś element 4<button class="delete">Usuń</button></div><div class="element">To jest jakiś element 5<button class="delete">Usuń</button></div><div class="element">To jest jakiś element 6<button class="delete">Usuń</button></div></div>
+
+        <div class="add-element-bar">
+            <button class="btn add-element">
+                Dodaj element
+            </button>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let counter = 0;
+                const addBtn = document.querySelector('.add-element');
+                const list = document.querySelector('.elements-list');
+
+                addBtn.addEventListener('click', function() {
+                    counter++;
+                    const el = document.createElement('div');
+                    el.classList.add('element');
+                    el.innerText = "To jest jakiś element " + counter;
+
+                    const del = document.createElement('button');
+                    del.innerText = "Usuń";
+                    del.classList.add('delete');
+                    el.appendChild(del);
+
+                    list.appendChild(el);
+                });
+
+                list.addEventListener('click', function(e) {
+                    //e.target - ten który kliknął
+                    //e.currentTarget - ten który nasłuchuje
+                    console.log(e.target)
+                    if (e.target.classList.contains('delete')) {
+                        const element = e.target.parentElement;
+                        element.parentElement.removeChild(element);
+                    }
+                });
+            });
+        </script>
+    
+<div id="viewPortSize" class="bottom_right" style="display: none; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 12px;"></div></body></html>

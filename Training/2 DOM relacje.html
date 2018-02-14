@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://kursjs.pl/kurs/dom/dom-relacje-zadanie.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Dom relacje</title>
+<style>
+    .module-list {
+        margin:30px 0;
+    }
+    .module {
+        padding:20px;
+        border:1px solid #aaa;
+        margin:20px 0;
+        box-shadow: 0 3px 3px -2px rgba(0,0,0,0.3);
+    }
+    .module-bar {
+        display: flex;
+    }
+    .module-bar-text {
+        flex-grow: 1;
+        font-weight: bold;
+        color:#222;
+        padding-left:20px;
+    }
+    .module-btn {
+        border:0;
+        background: #252A34;
+        border-radius: 4px;
+        font-size:14px;
+        font-weight: bold;
+        padding:10px 20px;
+        color:#fff;
+        cursor: pointer;
+        transition:0.3s background;
+    }
+    .module-btn:hover {
+        background: #EC185D;
+    }
+    .module-cnt {
+        overflow: hidden;
+        max-height:0;
+        transition:0.5s all;
+        padding-top: 0;
+    }
+    .module-cnt.show {
+        max-height:300px;
+        padding-top:20px;
+    }
+</style></head>
+
+<body>
+    
+<div class="module-list">
+
+    <div class="module" data-show="1">
+        <div class="module-bar">
+            Przykładowy tytuł modułu 1
+            <span class="module-bar-text">(Widoczne)</span>
+            <button class="btn module-btn" type="button">Toggle</button>
+        </div>
+
+        <div class="module-cnt show">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Debitis enim nam dicta vitae excepturi, dolore sapiente ipsa
+            repudiandae voluptatem officia impedit unde ullam, animi.
+            Iusto tenetur impedit provident ea sapiente?
+        </div>
+    </div>
+
+    <div class="module" data-show="1">
+        <div class="module-bar">
+            Przykładowy tytuł modułu 2
+            <span class="module-bar-text">(Widoczne)</span>
+            <button class="btn module-btn" type="button">Toggle</button>
+        </div>
+
+        <div class="module-cnt show">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Debitis enim nam dicta vitae excepturi, dolore sapiente ipsa
+            repudiandae voluptatem officia impedit unde ullam, animi.
+            Iusto tenetur impedit provident ea sapiente?
+        </div>
+    </div>    
+
+    <div class="module" data-show="1">
+        <div class="module-bar show">
+            Przykładowy tytuł modułu 3
+            <span class="module-bar-text">(Widoczne)</span>
+            <button class="btn module-btn" type="button">Toggle</button>
+        </div>
+
+        <div class="module-cnt">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Debitis enim nam dicta vitae excepturi, dolore sapiente ipsa
+            repudiandae voluptatem officia impedit unde ullam, animi.
+            Iusto tenetur impedit provident ea sapiente?
+        </div>
+    </div>    
+
+</div>
+
+
+<script>
+    const list = document.querySelector('.module-list');
+    const btn = list.querySelectorAll(':scope .module-btn');
+
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].addEventListener('click', function () {
+                const button = this; //kliknięty guzik
+
+                const module = button.parentElement.parentElement;
+                const moduleBar = button.parentElement;
+                const moduleBarText = button.previousElementSibling;
+                const moduleContent = moduleBar.nextElementSibling;
+
+                if (parseInt(module.dataset.show, 10) === 1) {
+                    moduleBarText.innerText = '(Niewidoczne)';
+                    moduleContent.classList.remove('show');
+                    module.dataset.show = 0;
+                } else {
+                    moduleBarText.innerText = '(Widoczne)';
+                    moduleContent.classList.add('show');
+                    module.dataset.show = 1;
+                }
+            });
+        }
+</script>
+
+<div id="viewPortSize" style="display: none; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 12px;" class="bottom_right"></div></body></html>
