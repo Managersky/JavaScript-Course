@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://kursjs.pl/kurs/dom/slider/slider-demo3.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="./Document_files/font-awesome.min.css">
+    <link href="./Document_files/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Document_files/slider.css">
+    <style>
+        /*
+        stylowanie dla dema
+        stylowanie slidera jest w slider.css
+        */
+        .slider {
+            margin-bottom:10px;
+        }
+        .slider .slider-button-prev,
+        .slider .slider-button-next {
+            background: rgba(0,0,0,0);
+            transition:0.5s background;
+        }
+        .slider .slider-button-prev:before,
+        .slider .slider-button-next:before {
+            content: '\f104';
+            opacity: 0.3;
+            font-family: 'FontAwesome';
+            transition:0.5s opacity
+        }
+        .slider .slider-button-next:before {
+            content: '\f105';
+        }
+        .slider .slider-button-prev:hover,
+        .slider .slider-button-next:hover {
+            background: rgba(0,0,0,0.3);
+        }
+        .slider .slider-button-prev:hover:before,
+        .slider .slider-button-next:hover:before{
+            opacity:1;
+        }
+        .slider1 {
+            background: url(slide-bg1.jpeg);
+            background-size: cover;
+            background-position: center center;
+        }
+        .slider2 {
+            background:
+                linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                url(slide-bg2.jpeg);
+            background-size: cover;
+            background-position: center center;
+        }
+        .slider2.slider .element-title {
+            font-family: 'Roboto Slab', serif;
+            text-transform: none;
+            font-size:4rem;
+        }
+        .slider2.slider .element-text {
+            font-weight: 300;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .slider3.slider {
+            background:
+                linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                url(slide-bg3.jpeg);
+            background-size: cover;
+            background-position: center center;
+        }
+        .slider3.slider .element-title {
+            font-family: 'Amatic SC', cursive;
+            text-transform: none;
+            font-size:8rem;
+            margin-bottom: 3rem;
+            font-weight: normal;
+        }
+        .slider3.slider .element-text {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        @media (max-width:1200px) {
+            .slider1.slider .element-title,
+            .slider3.slider .element-title {
+                font-size:4rem;
+                padding-left:2rem;
+                padding-right:2rem;
+            }
+            .slider2.slider .element-title {
+                font-size:3rem;
+                padding-left:2rem;
+                padding-right:2rem;
+            }
+        }
+    </style>
+
+    <div class="elements-list slider1 slider" id="slider1">
+        
+        
+        
+    <div class="slider-slides-cnt"><article class="element slider-slide" aria-hidden="true">
+            <h2 class="element-title">
+                1 Lorem ipsum dolor sit.
+            </h2>
+            <div class="element-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia dolore inventore, ipsam optio. Magni repellat officia autem fuga, laboriosam facilis?
+            </div>
+        </article><article class="element slider-slide slider-slide-active" aria-hidden="false">
+            <h2 class="element-title">
+                2 Lorem ipsum dolor sit.
+            </h2>
+            <div class="element-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum exercitationem asperiores perspiciatis sapiente ducimus atque dicta labore dolores sequi ut.
+            </div>
+        </article><article class="element slider-slide" aria-hidden="true">
+            <h2 class="element-title">
+                3 Lorem ipsum dolor sit.
+            </h2>
+            <div class="element-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus id quas, quia consectetur repellat quis! Minus voluptatibus, dolores iure deserunt.
+            </div>
+        </article></div><div class="slider-nav" aria-label="Slider prev next"><button type="button" class="slider-button slider-button-prev">Poprzedni</button><button type="button" class="slider-button slider-button-next">Następny</button></div><ul class="slider-dots" aria-label="Slider pagination"><li class="slider-dots-element"><button class="slider-dots-button" type="button" aria-label="Set slide 1">1</button></li><li class="slider-dots-element slider-dots-element-active"><button class="slider-dots-button" type="button" aria-label="Set slide 2">2</button></li><li class="slider-dots-element"><button class="slider-dots-button" type="button" aria-label="Set slide 3">3</button></li></ul></div>
+
+    <div class="elements-list slider2 slider" id="slider2">
+        
+        
+        
+    <div class="slider-slides-cnt"><article class="element slider-slide" aria-hidden="true">
+            <h2 class="element-title">
+                1 Lorem ipsum dolor sit.
+            </h2>
+            <div class="element-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia dolore inventore, ipsam optio. Magni repellat officia autem fuga, laboriosam facilis?
+            </div>
+        </article><article class="element slider-slide" aria-hidden="true">
+            <h2 class="element-title">
+                2 Lorem ipsum dolor sit.
+            </h2>
+            <div class="element-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum exercitationem asperiores perspiciatis sapiente ducimus atque dicta labore dolores sequi ut.
+            </div>
+        </article><article class="element slider-slide slider-slide-active" aria-hidden="false">
+            <h2 class="element-title">
+                3 Lorem ipsum dolor sit.
+            </h2>
+            <div class="element-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus id quas, quia consectetur repellat quis! Minus voluptatibus, dolores iure deserunt.
+            </div>
+        </article></div><div class="slider-nav" aria-label="Slider prev next"><button type="button" class="slider-button slider-button-prev">Poprzedni slide</button><button type="button" class="slider-button slider-button-next">Następny slide</button></div></div>
+
+    <div class="elements-list slider3 slider" id="slider3">
+        
+        
+        
+    <div class="slider-slides-cnt"><article class="element slider-slide" aria-hidden="true">
+            <h2 class="element-title">
+                1 Lorem ipsum dolor sit.
+            </h2>
+            <div class="element-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia dolore inventore, ipsam optio. Magni repellat officia autem fuga, laboriosam facilis?
+            </div>
+        </article><article class="element slider-slide slider-slide-active" aria-hidden="false">
+            <h2 class="element-title">
+                2 Lorem ipsum dolor sit.
+            </h2>
+            <div class="element-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum exercitationem asperiores perspiciatis sapiente ducimus atque dicta labore dolores sequi ut.
+            </div>
+        </article><article class="element slider-slide" aria-hidden="true">
+            <h2 class="element-title">
+                3 Lorem ipsum dolor sit.
+            </h2>
+            <div class="element-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus id quas, quia consectetur repellat quis! Minus voluptatibus, dolores iure deserunt.
+            </div>
+        </article></div><ul class="slider-dots" aria-label="Slider pagination"><li class="slider-dots-element"><button class="slider-dots-button" type="button" aria-label="Set slide 1">1</button></li><li class="slider-dots-element slider-dots-element-active"><button class="slider-dots-button" type="button" aria-label="Set slide 2">2</button></li><li class="slider-dots-element"><button class="slider-dots-button" type="button" aria-label="Set slide 3">3</button></li></ul></div>
+
+    <script>
+        const Slider = function(elemSelector, opts) {
+            const defaultOpts = {
+                pauseTime : 0,
+                prevText : "Poprzedni slide",
+                nextText : "Następny slide",
+                generateDots : true,
+                generatePrevNext : true
+            };
+            this.options = Object.assign({}, defaultOpts, opts);
+            this.sliderSelector = elemSelector;
+            this.currentSlide = 0; //aktualny slide
+            this.time = null; //tutaj będziemy podczepiać setTimeout
+            this.slider = null;
+            this.elem = null;
+            this.slides = null;
+
+            this.prev = null; //przycisk prev
+            this.next = null; //przucisl next
+            this.dots = [];
+
+            this.generateSlider();
+            this.changeSlide(this.currentSlide);
+        }
+        Slider.prototype.generateSlider = function() {
+            //pobieramy element który zamienimy na slider
+            this.slider = document.querySelector(this.sliderSelector);
+            this.slider.classList.add('slider');
+
+            //tworzymy kontener dla slajdow
+            const slidesCnt = document.createElement('div');
+            slidesCnt.classList.add('slider-slides-cnt');
+
+            //pobieramy element slajdów
+            this.slides = this.slider.children;
+
+            //to jest zywa kolekcja, więc przy przeniesieniu kazdego slajda
+            //jej dlugosc maleje
+            while (this.slides.length) {
+                this.slides[0].classList.add('slider-slide');
+                slidesCnt.appendChild(this.slides[0]);
+            }
+            this.slides = slidesCnt.children;
+            this.slider.appendChild(slidesCnt);
+
+            if (this.options.generatePrevNext) this.createPrevNext();
+            if (this.options.generateDots) this.createDots();
+        }
+        Slider.prototype.slidePrev = function() {
+            this.currentSlide--;
+            if (this.currentSlide < 0) {
+                this.currentSlide = this.slides.length - 1;
+            }
+            this.changeSlide(this.currentSlide);
+        }
+
+        Slider.prototype.slideNext = function() {
+            this.currentSlide++;
+            if (this.currentSlide > this.slides.length - 1) {
+                this.currentSlide = 0;
+            }
+            this.changeSlide(this.currentSlide);
+        }
+        Slider.prototype.changeSlide = function(index) {
+            [].forEach.call(this.slides, function(slide) {
+                slide.classList.remove('slider-slide-active');
+                slide.setAttribute('aria-hidden', true);
+            });
+
+            //dodajemy ją tylko wybranemu
+            this.slides[index].classList.add('slider-slide-active');
+            this.slides[index].setAttribute('aria-hidden', false);
+
+            //podobny manewr robimy dla kropek
+            if (this.options.generateDots) {
+                this.dots.forEach(function(dot) {
+                    dot.classList.remove('slider-dots-element-active');
+                });
+                this.dots[index].classList.add('slider-dots-element-active');
+            }
+
+            //aktualny slide przestawiamy na wybrany
+            this.currentSlide = index;
+
+            if (this.options.pauseTime !== 0) {
+                clearInterval(this.time);
+                this.time = setTimeout(function() {
+                    this.slideNext();
+                }.bind(this), this.options.pauseTime)
+            }
+        }
+        Slider.prototype.createPrevNext = function() {
+            this.prev = document.createElement('button');
+            this.prev.type = "button";
+            this.prev.innerText = this.options.prevText;
+            this.prev.classList.add('slider-button');
+            this.prev.classList.add('slider-button-prev');
+            this.prev.addEventListener('click', this.slidePrev.bind(this));
+
+            this.next = document.createElement('button');
+            this.next.type = "button";
+            this.next.innerText = this.options.nextText;
+            this.next.classList.add('slider-button');
+            this.next.classList.add('slider-button-next');
+            this.next.addEventListener('click', this.slideNext.bind(this));
+
+            const nav = document.createElement('div');
+            nav.classList.add('slider-nav');
+            nav.setAttribute('aria-label', 'Slider prev next');
+            nav.appendChild(this.prev);
+            nav.appendChild(this.next);
+            this.slider.appendChild(nav);
+        }
+        Slider.prototype.createDots = function() {
+            const ulDots = document.createElement('ul');
+            ulDots.classList.add('slider-dots');
+            ulDots.setAttribute('aria-label', 'Slider pagination');
+
+            //tworzymy pętlę w ilości liczby slajów
+            for (let i=0; i<this.slides.length; i++) {
+                //każdorazowo tworzymy LI wraz z buttonem
+                //każdy button po kliknięciu zmieni slajd
+                //za pomocą metody changeSlide()
+
+                const li = document.createElement('li');
+                li.classList.add('slider-dots-element');
+
+                const btn = document.createElement('button');
+                btn.classList.add('slider-dots-button');
+                btn.type = "button";
+                btn.innerText = i+1;
+                btn.setAttribute('aria-label', 'Set slide '+(i+1));
+
+                btn.addEventListener('click', function() {
+                    this.changeSlide(i);
+                }.bind(this));
+
+                li.appendChild(btn);
+
+                ulDots.appendChild(li);
+                this.dots.push(li);
+            }
+
+            this.slider.appendChild(ulDots);
+        }
+    </script>
+    <script>
+        const opts1 = {
+            pauseTime : 0,
+            prevText : "Poprzedni",
+            nextText : "Następny"
+        }
+        const slide1 = new Slider('#slider1', opts1);
+
+
+        const opts2 = {
+            pauseTime : 5000,
+            generateDots : false
+        }
+        const slide2 = new Slider('#slider2', opts2);
+
+
+        const opts3 = {
+            pauseTime : 3000,
+            generateDots : true,
+            generatePrevNext : false
+        }
+        const slide3 = new Slider('#slider3', opts3);
+    </script>
+
+<div id="viewPortSize" class="bottom_right" style="display: none; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 12px;"></div></body></html>
