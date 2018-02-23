@@ -1,0 +1,26 @@
+{
+    "users": [
+        {
+            "id": 0,
+            "name": "Marcin",
+            "surname": "Nowak"
+        },
+        {
+            "id": 0,
+            "name": "Piotr",
+            "surname": "Kowalski"
+        }
+    ],
+    "movies": [
+        {
+            "id": 0,
+            "name": "Gayver",
+            "genre": "sf"
+        },
+        {
+            "id": 1,
+            "name": "Poznaj mojego tatę",
+            "surname": "comedy"
+        }
+    ]
+}
