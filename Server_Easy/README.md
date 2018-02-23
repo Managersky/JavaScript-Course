@@ -20,4 +20,6 @@ Warto coś tam pozmieniać - np dodać własne dane.
 
 ### Fetch API Training
 
+Kurs: http://kursjs.pl/kurs/ajax/fetch.php
+
 1) Do testów wykorzystane jest darmowe API: https://jsonplaceholder.typicode.com/
