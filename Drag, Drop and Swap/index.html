@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Droppable - Drag, Drop and Swap</title>
+    <style>
+        .list {
+            display: flex;
+        }
+        .gallery {
+            display:flex;
+            flex-direction:column;
+        }
+        .gallery div {
+            width: 96px;
+            padding: 0.4em;
+            margin: 0 0.4em 0.4em 0;
+            text-align: center;
+            border: 1px solid red;
+        }
+        #box {
+            width: 10%;
+            height: 80px;
+            padding: 1%;
+            border: 1px solid blue;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <div class="list">
+
+        <div id="gallery" class="gallery">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+
+        <div id="box"></div>
+
+    </div>
+
+
+</body>
+
+</html>
