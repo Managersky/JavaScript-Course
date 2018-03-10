@@ -4,44 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Slider</title>
+    <title>Sliders</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/slider.js" defer></script>
-    <script src="js/test.js" defer></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
 <body>
-    <div class="elements-list" id="slider1">
-        <article class="element">
+
+    <!-- Pierwszy slider -->
+    <div class="elements-list slider1 slider" id="slider1">
+        <div class="slider-slides-cnt">
+            <article class="element slider-slide slider-slide-active" aria-hidden="true">
+                <h2 class="element-title">1 Lorem ipsum dolor sit.</h2>
+                <div class="element-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia dolore inventore, ipsam optio. Magni repellat officia
+                    autem fuga, laboriosam facilis?
+                </div>
+            </article>
+            <article class="element slider-slide" aria-hidden="false">
+                <h2 class="element-title">2 Lorem ipsum dolor sit.</h2>
+                <div class="element-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum exercitationem asperiores perspiciatis sapiente ducimus atque
+                    dicta labore dolores sequi ut.
+                </div>
+            </article>
+            <article class="element slider-slide" aria-hidden="true">
+                <h2 class="element-title">3 Lorem ipsum dolor sit.</h2>
+                <div class="element-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus id quas, quia consectetur repellat quis! Minus voluptatibus,
+                    dolores iure deserunt.
+                </div>
+            </article>
+        </div>
+        
+        <div class="slider-nav" aria-label="Slider prev next">
+            <button type="button" class="slider-button slider-button-prev">Poprzedni</button>
+            <button type="button" class="slider-button slider-button-next">Następny</button>
+        </div>
+        <ul class="slider-dots" aria-label="Slider pagination">
+            <li class="slider-dots-element">
+                <button class="slider-dots-button" type="button" aria-label="Set slide 1">1</button>
+            </li>
+            <li class="slider-dots-element slider-dots-element-active">
+                <button class="slider-dots-button" type="button" aria-label="Set slide 2">2</button>
+            </li>
+            <li class="slider-dots-element">
+                <button class="slider-dots-button" type="button" aria-label="Set slide 3">3</button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Drugi slider -->
+    <!-- <div class="elements-list slider2 slider" id="slider2">
+
+    <div class="slider-slides-cnt"><article class="element slider-slide" aria-hidden="true">
             <h2 class="element-title">
                 1 Lorem ipsum dolor sit.
             </h2>
             <div class="element-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia dolore inventore, ipsam optio. Magni repellat officia autem fuga, laboriosam facilis?
             </div>
-        </article>
-        <article class="element">
+        </article><article class="element slider-slide" aria-hidden="true">
             <h2 class="element-title">
                 2 Lorem ipsum dolor sit.
             </h2>
             <div class="element-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum exercitationem asperiores perspiciatis sapiente ducimus atque dicta labore dolores sequi ut.
             </div>
-        </article>
-        <div class="slider-nav">
-            <button type="button" class="slider-button slider-button-prev">Poprzedni</button>
-            <button type="button" class="slider-button slider-button-next">Następny</button>
-        </div>
-        <ul class="slider-dots">
-            <li class="slider-dots-element slider-dots-element-active">
-                <button class="slider-dots-button" type="button">1</button>
-            </li>
-            <li class="slider-dots-element">
-                <button class="slider-dots-button" type="button">2</button>
-            </li>
-            <li class="slider-dots-element">
-                <button class="slider-dots-button" type="button">3</button>
-            </li>
-        </ul>
-    </div>
-</body>
-</html>
+        </article><article class="element slider-slide slider-slide-active" aria-hidden="false">
+            <h2 class="element-title">
+                3 Lorem ipsum dolor sit.
+            </h2>
+            <div class="element-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus id quas, quia consectetur repellat quis! Minus voluptatibus, dolores iure deserunt.
+            </div>
+        </article></div><div class="slider-nav" aria-label="Slider prev next"><button type="button" class="slider-button slider-button-prev">Poprzedni slide</button><button type="button" class="slider-button slider-button-next">Następny slide</button></div></div>
+
+    <div class="elements-list slider3 slider" id="slider3">
+
+
+
+    <div class="slider-slides-cnt"><article class="element slider-slide" aria-hidden="true">
+            <h2 class="element-title">
+                1 Lorem ipsum dolor sit.
+            </h2>
+            <div class="element-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia dolore inventore, ipsam optio. Magni repellat officia autem fuga, laboriosam facilis?
+            </div>
+        </article><article class="element slider-slide slider-slide-active" aria-hidden="false">
+            <h2 class="element-title">
+                2 Lorem ipsum dolor sit.
+            </h2>
+            <div class="element-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum exercitationem asperiores perspiciatis sapiente ducimus atque dicta labore dolores sequi ut.
+            </div>
+        </article><article class="element slider-slide" aria-hidden="true">
+            <h2 class="element-title">
+                3 Lorem ipsum dolor sit.
+            </h2>
+            <div class="element-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus id quas, quia consectetur repellat quis! Minus voluptatibus, dolores iure deserunt.
+            </div>
+        </article></div><ul class="slider-dots" aria-label="Slider pagination"><li class="slider-dots-element"><button class="slider-dots-button" type="button" aria-label="Set slide 1">1</button></li><li class="slider-dots-element slider-dots-element-active"><button class="slider-dots-button" type="button" aria-label="Set slide 2">2</button></li><li class="slider-dots-element"><button class="slider-dots-button" type="button" aria-label="Set slide 3">3</button></li></ul></div> -->
+
+    <script src="js/slider.js"></script>
+    <script src="js/test.js"></script>
+
+<div id="viewPortSize" class="bottom_right" style="display: none; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); font-size: 12px;"></div></body></html>
