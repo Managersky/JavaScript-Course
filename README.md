@@ -2,13 +2,21 @@
 
 This is a list of my scripts written in JS/JQuery. Scripts made as part of the training.
 
-## To Do app
+## Todo App
 
 ## Ping pong game
+
+### Description:
+
+First mini-game write in canvas
 
 ## Slider
 
 ## Unit converter
+
+### Description:
+
+First mini-app write in js
 
 ## Validation of forms
 
