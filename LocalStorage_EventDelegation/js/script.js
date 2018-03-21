@@ -1,6 +1,9 @@
 const addItems = document.querySelector('.add-items');
 const itemsList = document.querySelector('.plates');
 const items = JSON.parse(localStorage.getItem("items")) || [];
+const selectAllBtn = document.getElementById("selectAll");
+const uncheckAllBtn = document.getElementById("uncheckAll");
+const deleteListBtn = document.getElementById("deleteList");
 
 function addItem(e) {
     e.preventDefault();
@@ -36,7 +39,30 @@ function toggleDone(e) {
     populateList(items, itemsList);
 }
 
+function selectAll(e) {
+    items.forEach(item => item.done = true);
+    localStorage.setItem("items", JSON.stringify(items));
+    populateList(items, itemsList);
+}
+
+function unchecktAll(e) {
+    items.forEach(item => item.done = false);
+    localStorage.setItem("items", JSON.stringify(items));
+    populateList(items, itemsList);
+}
+
+function removeAll(e) {
+    if (items.length > 0) {
+        items.length = 0;
+    }
+    localStorage.removeItem("items");
+    populateList(items, itemsList);
+}
+
 addItems.addEventListener("submit", addItem);
 itemsList.addEventListener("click", toggleDone);
+selectAllBtn.addEventListener("click", selectAll);
+uncheckAllBtn.addEventListener("click", unchecktAll);
+deleteListBtn.addEventListener("click", removeAll);
 
 populateList(items, itemsList);
