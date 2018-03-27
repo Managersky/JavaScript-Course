@@ -1,10 +1,30 @@
 /* ----- slider ---- */
-.slider {
+.slider1 {
     position: relative;
     background: url("../images/photo1.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+}
+
+.slider2 {
+    position: relative;
+    background: url("../images/photo2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.slider3 {
+    position: relative;
+    background: url("../images/photo3.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.slider-slides {
+    display: none;
+    visibility: hidden;
 }
 .slider-slides-cnt {
     height:700px;
@@ -34,7 +54,7 @@
     position: relative;
     left:-3rem;
     opacity:0;
-    font-size:6rem;
+    font-size:3rem;
     text-transform: uppercase;
     font-weight: normal;
     margin-top:0;

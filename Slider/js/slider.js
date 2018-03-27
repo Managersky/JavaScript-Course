@@ -9,20 +9,19 @@ const Slider = function (elemSelector, opts) {
         generatePrevNext: true
     };
 
-    this.options = Object.assign({}, defaultOpts, opts);
+    this.options = Object.assign({}, defaultOpts, opts); //klonowanie obiektu
     this.sliderSelector = elemSelector;
     this.currentSlide = 0; //aktualny slide
     this.time = null; //tutaj będziemy podczepiać setTimeout
     this.slider = null;
     this.elem = null;
     this.slides = null;
-
     this.prev = null; //przycisk prev
     this.next = null; //przucisl next
     this.dots = [];
 
     this.generateSlider();
-    this.changeSlide(this.currentSlide);
+    // this.changeSlide(this.currentSlide);
 };
 
 Slider.prototype.generateSlider = function () {
@@ -35,10 +34,9 @@ Slider.prototype.generateSlider = function () {
     slidesCnt.classList.add('slider-slides-cnt');
 
     //pobieramy element slajdów
-    this.slides = this.slider.children;
+    this.slides = this.slider.firstElementChild.children;
 
-    //to jest zywa kolekcja, więc przy przeniesieniu kazdego slajda
-    //jej dlugosc maleje
+    //to jest zywa kolekcja, więc przy przeniesieniu kazdego slajda jej dlugosc maleje
     while (this.slides.length) {
         this.slides[0].classList.add('slider-slide');
         slidesCnt.appendChild(this.slides[0]);
