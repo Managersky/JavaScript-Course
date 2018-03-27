@@ -10,6 +10,10 @@ Todo app in VanillaJS
 
 List of array methods and how it's works - challenge 4 and 7 #JS30
 
+## Control CSS Variable
+
+Control CSS Variables with using JS - challenge 3 #JS30
+
 ## Dev Tools Tricks
 
 Some dev tools tricks - challenge 9 #JS30
@@ -18,6 +22,10 @@ Some dev tools tricks - challenge 9 #JS30
 ## Drag, Drop and Swap
 
 Easy script (write in jQuery) to add items from list to box. User can add only one item to the box. If you drag and drop another item from list to the box, items will be swapped. It's possibility to take item form the box and put it back on the list.
+
+## Flex-Gallery
+
+Flexible gallery - challenge 5 #JS30
 
 ## Follow Along Link Highlighter/Navigation
 
