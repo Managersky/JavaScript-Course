@@ -10,6 +10,10 @@ Todo app in VanillaJS
 
 List of array methods and how it's works - challenge 4 and 7 #JS30
 
+## Click Drag Scroll Slider
+
+Great effect of drag, scroll slider - challenge 27 #JS30
+
 ## Control CSS Variable
 
 Control CSS Variables with using JS - challenge 3 #JS30
