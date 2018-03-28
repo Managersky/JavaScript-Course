@@ -2,6 +2,8 @@ const slider = document.querySelector(".items");
 let isDown = false;
 let startX;
 let scrollLeft;
+let slideWalk;
+let scrollX = 0;
 
 slider.addEventListener("mousedown", (e) => {
     isDown = true;
@@ -26,4 +28,11 @@ slider.addEventListener("mousemove", (e) => {
     const x = e.pageX - slider.offsetLeft;
     const walk = (x - startX) * 3; // * 3 px
     slider.scrollLeft = scrollLeft - walk;
+    scrollX = slider.scrollLeft;
+});
+
+slider.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    scrollX += (2 * e.deltaY);
+    slider.scrollLeft = scrollX;
 });
