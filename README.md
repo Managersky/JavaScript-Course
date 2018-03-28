@@ -75,6 +75,6 @@ Some great effect with navigation bar - challenge 24 #JS30
 
 ## Validation of forms
 
-Form validation in Vanilla JS
+Form validation in JQuery
 
 
