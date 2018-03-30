@@ -18,6 +18,10 @@ Great effect of drag, scroll slider - challenge 27 #JS30
 
 Control CSS Variables with using JS - challenge 3 #JS30
 
+## Countdown clock
+
+Easy app to control time - similar to Pomodoro - challenge 29 #JS30
+
 ## Dev Tools Tricks
 
 Some dev tools tricks - challenge 9 #JS30
@@ -77,4 +81,6 @@ Some great effect with navigation bar - challenge 24 #JS30
 
 Form validation in JQuery
 
+## Whack a Mole
 
+Mini game in vanilla JS - challenge 30 #JS30
