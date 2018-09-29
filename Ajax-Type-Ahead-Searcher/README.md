@@ -7,3 +7,7 @@
 1) Spread method
 2) Number of commas
 3) operate on json
+
+## Demo
+
+![Demo](https://github.com/witoldmetel/JavaScript-Course/tree/master/Ajax-Type-Ahead-Searcher/Demo.gif "Demo")
