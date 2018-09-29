@@ -10,4 +10,4 @@
 
 ## Demo
 
-![Demo](https://github.com/witoldmetel/JavaScript-Course/tree/master/Ajax-Type-Ahead-Searcher/Demo.gif "Demo")
+![Demo](https://github.com/witoldmetel/JavaScript-Course/blob/master/Ajax-Type-Ahead-Searcher/Demo.gif "Demo")
