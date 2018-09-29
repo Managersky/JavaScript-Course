@@ -2,6 +2,10 @@
 
 This is a list of my scripts written in JS/JQuery. Scripts made as part of the training.
 
+## Ajax-Type-Ahead-Searcher
+
+Dynamic search input (AJAX) - challenge 6 #JS30
+
 ## Todo App
 
 Todo app in VanillaJS
