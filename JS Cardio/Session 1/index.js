@@ -71,7 +71,29 @@ function reverseInt(int) {
 // CHALLENGE 4: CAPITALIZE LETTERS
 // Return a string with the first letter of every word capitalized
 // ex. capitalizeLetters('i love javascript') === 'I Love Javascript'
-function capitalizeLetters(str) { }
+function capitalizeLetters(str) { 
+    // METHOD 1
+    // const strArr = str.toLowerCase().split(' '); // make sure that all letters are small
+
+    // for (let i = 0; i < strArr.length; i++) {
+    //     strArr[i] = strArr[i].substring(0, 1).toUpperCase() // substring pluck out first letter of word
+    //     + strArr[i].substring(1) // substring(1) means start from second letter and add rest of word
+    // }
+    // return strArr.join(' ');
+
+    // METHOD 2
+    // return str
+    //     .toLowerCase()
+    //     .split(' ')
+    //     // substr takes parameters as (from, length) vs substring takes parameters as (from, to)
+    //     .map(word => word[0].toUpperCase() + word.substr(1))
+    //     .join(' ');
+
+    // METHOD 3
+    const regExp = /\b[a-z]/gi;
+
+    return str.replace(regExp, char => char.toUpperCase());
+}
 
 
 
@@ -89,6 +111,6 @@ function fizzBuzz() { }
 
 
 // Call Function
-const output = reverseInt(123);
+const output = capitalizeLetters('i love java');
 
 console.log(output);
