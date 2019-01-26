@@ -96,7 +96,20 @@ function sortByHeight(array) {
 // missingLetters("abcdefghjklmno") == "i"
 // missingLetters("abcdefghijklmnopqrstuvwxyz") == undefined
 
-function missingLetters() {}
+function missingLetters(str) {
+    let compare = str.charCodeAt(0);
+    let missing;
+
+    str.split('').map((char, index) => {
+        if (str.charCodeAt(index) == compare) {
+            compare++;
+        } else {
+            missing = String.fromCharCode(compare);
+        }
+    })
+
+    return missing;
+}
 
 // CHALLENGE 6: EVEN & ODD SUMS
 // Take in an array and return an array of the sums of even and odd numbers
@@ -106,7 +119,6 @@ function missingLetters() {}
 function evenOddSums() {}
 
 // Call Function
-const a = [-1, 150, 190, 170, -1, -1, 160, 180] // -1 is tree
-const output = sortByHeight(a);
+const output = missingLetters("abce");
 
 console.log(output);
