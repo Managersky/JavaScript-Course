@@ -3,9 +3,36 @@
 // ex. longestWord('Hi there, my name is Brad') === 'there,'
 
 function longestWord(sen) {
-    // SOLUTION 1 - Return a single longest word
-    // SOLUTION 2 - Return an array and include multiple words if they have the same length
-    // SOLUTION 3 - Only return an array if multiple words, otherwise return a string
+    // SOLUTION 1
+    // const regExp = /[a-z0-9]+/g;
+    // const wordArr = sen.toLowerCase().match(regExp); //create filtered array which return only words
+    // const sortedArr = wordArr.sort((a, b) => b.length - a.length); // sort by longest word
+    // const longestWordsArr = sortedArr.filter(word => word.length === sortedArr[0].length); // if multiple words has the same lenght, put them into array
+
+    // // check if more than one array value
+    // if (longestWordsArr.length === 1) {
+    //     return longestWordsArr[0];
+    // } else {
+    //     return longestWordsArr;
+    // }
+
+    // SOLUTION 2
+    let maxLetters = 0;
+    let outputArr = [];
+    
+    sen.toLowerCase()
+      .match(/\w+/g)
+      .forEach(word => {
+        if (!(word.length < maxLetters)) {
+          if (word.length > maxLetters) {
+            maxLetters = word.length;
+            outputArr = [];
+          }
+          outputArr.push(word);
+        }
+      });
+    
+    return outputArr.length > 1 ? outputArr : outputArr[0];
 }
 
 // CHALLENGE 2: ARRAY CHUNKING
