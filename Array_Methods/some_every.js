@@ -37,23 +37,23 @@
 // };
 
 // // Helper function for .some() method
-// const hasTwoOrMoreInts = (entries) => {
-//     let lastIndex = -1;
-//     let hasMinimumIntsCount = false;
+const hasTwoOrMoreInts = (entries) => {
+    let lastIndex = -1;
+    let hasMinimumIntsCount = false;
 
-//     const hasAnInt = entries.some((entry, index) => {
-//         lastIndex = index;
-//         return Number.isInteger(entry);
-//     });
+    const hasAnInt = entries.some((entry, index) => {
+        lastIndex = index;
+        return Number.isInteger(entry);
+    });
 
-//     if (hasAnInt === true) {
-//         // we've got one int, is there another?
-//         const hasMoreInts = entries.slice(lastIndex + 1).some(Number.isInteger);
-//         hasMinimumIntsCount = (hasMoreInts === true) && hasAnInt;
-//     }
+    if (hasAnInt === true) {
+        // we've got one int, is there another?
+        const hasMoreInts = entries.slice(lastIndex + 1).some(Number.isInteger);
+        hasMinimumIntsCount = (hasMoreInts === true) && hasAnInt;
+    }
 
-//     return hasMinimumIntsCount;
-// };
+    return hasMinimumIntsCount;
+};
 
 // Scenario Two
 // add() function can receive mixed input(e.g integers, floats, undefined, strings, e.t.c) 
