@@ -43,7 +43,13 @@ Flexible gallery - challenge 5 #JS30
 
 Great effect with using method getBoundingClientRect() - challenge 22 and 26 #JS30
 
-## Form API (Interwiev training)
+## Form API (Interview training)
+
+Manipulate data from API in simple form
+
+## JS Cardio
+
+Intermediate JavaScript challenges for interview
 
 ## KONAMI Code
 
