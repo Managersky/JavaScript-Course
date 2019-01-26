@@ -72,10 +72,22 @@ function seekAndDestroy(arr, ...rest) {
 // CHALLENGE 4: SORT BY HEIGHT
 // Some people are standing in a row in a park. There are trees between them which cannot be moved. Your task is to rearrange the people by their heights in a non-descending order without moving the trees.
 // ex.
-// a = [-1, 150, 190, 170, -1, -1, 160, 180]
+// a = [-1, 150, 190, 170, -1, -1, 160, 180] // -1 is tree
 // sortByHeight(a) == [-1, 150, 160, 170, -1, -1, 180, 190]
 
-function sortByHeight() {}
+function sortByHeight(array) {
+    const arrayPostions = []; // Positions of -1 (trees)
+    const arrayValues = []; // Values of people height
+
+    array.forEach((val, i) => {
+        return val === -1 ? arrayPostions.push(i) : arrayValues.push(val);
+    });
+
+    const sortArr = arrayValues.sort((a, b) => a - b);
+
+    arrayPostions.forEach((val, i) => sortArr.splice(arrayPostions[i], 0, -1))
+    return sortArr;
+}
 
 // CHALLENGE 5: MISSING LETTERS
 // Find the missing letter in the passed letter range and return it. If all letters are present, return undefined
@@ -94,6 +106,7 @@ function missingLetters() {}
 function evenOddSums() {}
 
 // Call Function
-const output = seekAndDestroy([2, 3, 4, 6, 6, 'hello'], 2, 6);
+const a = [-1, 150, 190, 170, -1, -1, 160, 180] // -1 is tree
+const output = sortByHeight(a);
 
 console.log(output);
