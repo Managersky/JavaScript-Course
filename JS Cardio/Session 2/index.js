@@ -137,9 +137,24 @@ function formatStr(str) {
 // Z should turn to A
 // ex. 'hello there' === 'Ifmmp UIfsf'
 
-function letterChanges(str) {}
+function letterChanges(str) {
+    // SOLUTION 1
+    const regExp = /[a-z]/gi;
+    const regExpVowels = /a|e|i|o|u/gi;
+
+    let newStr = str.toLowerCase().replace(regExp, char => {
+        if (char === 'z' || char === 'Z') {
+            return 'a';
+        } else {
+            return String.fromCharCode(char.charCodeAt() + 1);
+        }
+    });
+
+    newStr = newStr.replace(regExpVowels, vowel => vowel.toUpperCase());
+    return newStr;
+}
 
 // Call Function
-const output = isAnagram('Dormitory', 'dirty room##');
+const output = letterChanges('Abcdz');
 
 console.log(output);
