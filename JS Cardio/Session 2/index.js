@@ -19,7 +19,7 @@ function longestWord(sen) {
     // SOLUTION 2
     let maxLetters = 0;
     let outputArr = [];
-    
+
     sen.toLowerCase()
       .match(/\w+/g)
       .forEach(word => {
@@ -40,7 +40,58 @@ function longestWord(sen) {
 // ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 3) === [[1, 2, 3],[4, 5, 6],[7]]
 // ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2],[3, 4],[5, 6],[7]]
 
-function chunkArray(arr, len) {}
+function chunkArray(arr, len) {
+    // SOLUTION 1
+    // const chunkedArray = [];
+    // let i = 0;
+
+    // while (i < arr.length) {
+    //     chunkedArray.push(arr.slice(i, i + len));
+    //     i += len;
+    // }
+    // return chunkedArray;
+
+    // SOLUTION 2
+    // const chunkedArr = []; // Init chunked array
+
+    // arr.forEach(val => {
+    //     const last = chunkedArr[chunkedArr.length - 1]; // Get last element
+    //     // Check if last and if last length is equal to the chunk len
+    //     if (!last || last.length === len) {
+    //         chunkedArr.push([val]);
+    //     } else {
+    //         last.push(val);
+    //     }
+    // });
+
+    // return chunkedArr;
+
+    // SOLUTION 3
+    // let i=0, output = [], currArr = [];
+
+    // arr.forEach(element => {
+    //     currArr.push(element);
+    //     i++;
+
+    //     if (i % len === 0 || i === arr.length) {
+    //         output.push(currArr);
+    //         currArr = [];
+    //     }
+    // });
+    // return output;
+
+    // SOLUTION 4
+    // return Array.from({ length: Math.ceil(arr.length / len) }, (v, i) => arr.slice(i * len, i * len + len));
+
+    // SOLUTION 5
+    const chunks = [];
+
+    while (arr.length >= len) {
+      chunks.push(arr.splice(0, len));
+    }
+    chunks.push(arr.splice(0));
+    return chunks;
+}
 
 // CHALLENGE 3: FLATTEN ARRAY
 // Take an array of arrays and flatten to a single array
@@ -63,6 +114,6 @@ function isAnagram(str1, str2) {}
 function letterChanges(str) {}
 
 // Call Function
-const output = longestWord('Hello, my name is Brad');
+const output = chunkArray([1, 2, 3, 4, 5, 6, 7], 2);
 
 console.log(output);
