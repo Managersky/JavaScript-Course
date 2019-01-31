@@ -12,6 +12,7 @@ body {
     min-height: 100vh;
     overflow: hidden;
     display: flex;
+    cursor: pointer;
 }
 
 .panel {
@@ -131,4 +132,10 @@ body {
 
 .panel p {
     text-transform: uppercase;
+}
+
+.panel1.open-active>.panel-click,
+.panel2.open-active>.panel-click,
+.panel3.open-active>.panel-click {
+    display: none;
 }
