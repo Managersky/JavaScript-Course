@@ -8,7 +8,7 @@ Dynamic search input (AJAX) - challenge 6 #JS30
 
 ## Todo App
 
-Todo app in VanillaJS
+Very simple todo app in VanillaJS
 
 ## Array Methods
 
@@ -17,6 +17,10 @@ List of array methods and how it's works - challenge 4 and 7 #JS30
 ## Click Drag Scroll Slider
 
 Great effect of drag, scroll slider - challenge 27 #JS30
+
+## Colorfull Brush Canvas
+
+Click and dive into colors! Rainbow paint brush
 
 ## Control CSS Variable
 
@@ -35,6 +39,14 @@ Some dev tools tricks - challenge 9 #JS30
 
 Easy script (write in jQuery) to add items from list to box. User can add only one item to the box. If you drag and drop another item from list to the box, items will be swapped. It's possibility to take item form the box and put it back on the list.
 
+## Drum Kit
+
+Fancy effect with sound (using audio tag)
+
+## Fancy Form
+
+Nice Form based on Brad's Traversy Course
+
 ## Flex-Gallery
 
 Flexible gallery - challenge 5 #JS30
@@ -47,9 +59,21 @@ Great effect with using method getBoundingClientRect() - challenge 22 and 26 #JS
 
 Manipulate data from API in simple form
 
+## HTML5 Video Player
+
+Based on challenge 11 and 28 of #JS30, I've create my custom video player.
+
+## Image Filter Web App
+
+Training app with using CamanJS, based on Brad's Traversy Course
+
 ## JS Cardio
 
 Intermediate JavaScript challenges for interview
+
+## JS Clock
+
+Analog clock in vanilla JS
 
 ## KONAMI Code
 
@@ -65,11 +89,11 @@ Fun with text shadow - challenge 16 #JS30
 
 ## Ping pong game
 
-First mini-game write in canvas
+First mini-game write in Canvas
 
 ## Server Easy
 
-First time with AJAX, JSON
+First time with AJAX and JSON
 
 ## Slide Scroll
 
@@ -77,7 +101,7 @@ When user scroll on the page, the pictures are disappears or appears - challenge
 
 ## Slider
 
-3 diffrent sliders in VanillaJS
+3 diffrent sliders in vanilla JS
 
 ## Sort Array
 
@@ -86,10 +110,6 @@ Sort some array string variables without a/an/the - challenge 18 #JS30
 ## Sticky Navigation
 
 Some great effect with navigation bar - challenge 24 #JS30
-
-## Validation of forms
-
-Form validation in JQuery
 
 ## Whack a Mole
 
