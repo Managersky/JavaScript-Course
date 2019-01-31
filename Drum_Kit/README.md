@@ -8,6 +8,3 @@
 2) data-key, keyCode
 3) template strings
 
-## Live: 
-
-https://witoldmetel.github.io/Drum-Kit/
