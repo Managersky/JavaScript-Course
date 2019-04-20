@@ -18,7 +18,7 @@ List of array methods and how it's works - challenge 4 and 7 #JS30
 
 Great effect of drag, scroll slider - challenge 27 #JS30
 
-## Colorfull Brush Canvas
+## Colorful Brush Canvas
 
 Click and dive into colors! Rainbow paint brush
 
@@ -101,7 +101,11 @@ When user scroll on the page, the pictures are disappears or appears - challenge
 
 ## Slider
 
-3 diffrent sliders in vanilla JS
+3 different sliders in vanilla JS
+
+## Smooth Scroll
+
+Simple landing page with smooth scrolling including pure CSS (scroll-behavior)
 
 ## Sort Array
 
