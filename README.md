@@ -67,6 +67,10 @@ Based on challenge 11 and 28 of #JS30, I've create my custom video player.
 
 Training app with using CamanJS, based on Brad's Traversy Course
 
+## Impossible CSS Layout
+
+Tricky layout in CSS
+
 ## JS Cardio
 
 Intermediate JavaScript challenges for interview
