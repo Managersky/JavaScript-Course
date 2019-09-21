@@ -1,3 +1,6 @@
+***TODO***
+https://hackernoon.com/4-ways-to-go-monorepo-in-2019-ea5d19fc1f08
+
 # My training scripts
 
 This is a list of my scripts written in JS/JQuery. Scripts made as part of the training.
