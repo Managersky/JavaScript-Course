@@ -1,0 +1,36 @@
+{
+  "name": "React-Size-Aware-Components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/witoldmetel/React-Size-Aware-Components.git"
+  },
+  "keywords": [],
+  "author": "Witold Metel",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^3.23.4",
+    "faker": "^4.1.0",
+    "less": "^3.10.3",
+    "parcel-plugin-less-js-enabled": "^1.0.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-measure": "^2.3.0",
+    "react-router-dom": "^5.0.1",
+    "react-sizeme": "^2.6.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-plugin-import": "^1.12.1",
+    "parcel-bundler": "^1.12.3",
+    "react-hot-loader": "^4.12.13"
+  }
+}

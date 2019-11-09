@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Fancy Form",
   "main": "index.js",
+  "module": "src/index.js",
   "scripts": {
     "sass": "node-sass -w scss/ -o css/"
   },
