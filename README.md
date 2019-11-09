@@ -1,6 +1,3 @@
-***TODO***
-https://hackernoon.com/4-ways-to-go-monorepo-in-2019-ea5d19fc1f08
-
 # My training scripts
 
 This is a list of my scripts written in JS/JQuery. Scripts made as part of the training.
@@ -36,7 +33,8 @@ Easy app to control time - similar to Pomodoro - challenge 29 #JS30
 ## Dev Tools Tricks
 
 Some dev tools tricks - challenge 9 #JS30
-1) Inspect Mode, then right click on interesting element --> Break on --> attribute modifications
+
+1. Inspect Mode, then right click on interesting element --> Break on --> attribute modifications
 
 ## Drag, Drop and Swap
 
@@ -46,10 +44,6 @@ Easy script (write in jQuery) to add items from list to box. User can add only o
 
 Fancy effect with sound (using audio tag)
 
-## Fancy Form
-
-Nice Form based on Brad's Traversy Course
-
 ## Flex-Gallery
 
 Flexible gallery - challenge 5 #JS30
@@ -58,21 +52,20 @@ Flexible gallery - challenge 5 #JS30
 
 Great effect with using method getBoundingClientRect() - challenge 22 and 26 #JS30
 
-## Form API (Interview training)
-
-Manipulate data from API in simple form
-
 ## HTML5 Video Player
 
 Based on challenge 11 and 28 of #JS30, I've create my custom video player.
 
 ## Image Filter Web App
 
-Training app with using CamanJS, based on Brad's Traversy Course
+Training app in CamanJS, based on Brad's Traversy Course. CamanJS is (ca)nvas (man)ipulation in Javascript.
+
+This is my firt time when I use Bootstrap. To more precisely, I use Bootswatch (https://bootswatch.com/)
 
 ## Impossible CSS Layout
 
-Tricky layout in CSS
+Based on Wes Bos Video:
+https://www.youtube.com/watch?v=CCUNQud5gEI
 
 ## JS Cardio
 
@@ -88,7 +81,7 @@ Key sequence detection - challenge 12 #JS30
 
 ## LocalStorage EventDelegation
 
-How's work Local Storage and what's event delegation - challenge 15 #JS30
+How's work Local Storage and what is event delegation - challenge 15 #JS30
 
 ## Mouse Move Text Shadow
 
@@ -97,10 +90,6 @@ Fun with text shadow - challenge 16 #JS30
 ## Ping pong game
 
 First mini-game write in Canvas
-
-## Server Easy
-
-First time with AJAX and JSON
 
 ## Slide Scroll
 
