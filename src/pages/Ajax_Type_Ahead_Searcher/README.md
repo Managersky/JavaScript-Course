@@ -6,4 +6,4 @@
 
 1. Spread method
 2. Number of commas
-3. operate on json
+3. Operate on json file

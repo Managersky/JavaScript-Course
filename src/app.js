@@ -8,24 +8,28 @@ const { SubMenu } = Menu;
 import "./App.less";
 
 export class App extends React.Component {
-  render() {
-    return (
-      <Router>
-        <Layout>
-          <Layout>
-            <Header className="header">
-              <strong>JavaScript Course</strong>
-            </Header>
-            {/* <Route path="/demo1" exact component={Demo1} />
-            <Route path="/demo2" component={Demo2} />
-            <Route path="/demo3" component={Demo3} />
-            <Route path="/demo4" component={Demo4} /> */}
-            <Footer>
-              JavaScript Training Course ©2018 Created by Witold Mętel
-            </Footer>
-          </Layout>
-        </Layout>
-      </Router>
-    );
-  }
+	render() {
+		return (
+			<Router>
+				<Layout>
+					<Layout>
+						<Header className="header">
+							<strong>JavaScript Course</strong>
+						</Header>
+						<a href="/faq"> FAQ </a>
+						<Route
+							path="/faq"
+							component={() =>
+								(window.location =
+									"src/packages/Ajax_Type_Ahead_Searcher/index.html")
+							}
+						/>
+						<Footer>
+							JavaScript Training Course ©2018 Created by Witold Mętel
+						</Footer>
+					</Layout>
+				</Layout>
+			</Router>
+		);
+	}
 }
