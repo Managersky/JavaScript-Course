@@ -4,6 +4,8 @@ This is a list of my scripts written in JS/JQuery. Scripts made as part of the t
 
 Repository had also `Project Boilerplate` for simple vanilla JS project.
 
+Demos: https://witoldmetel.github.io/JavaScript-Course/
+
 ## Ajax-Type-Ahead-Searcher
 
 Dynamic search input (AJAX) - challenge 6 #JS30
