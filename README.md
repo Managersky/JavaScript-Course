@@ -2,6 +2,8 @@
 
 This is a list of my scripts written in JS/JQuery. Scripts made as part of the training.
 
+Repository had also `Project Boilerplate` for simple vanilla JS project.
+
 ## Ajax-Type-Ahead-Searcher
 
 Dynamic search input (AJAX) - challenge 6 #JS30
