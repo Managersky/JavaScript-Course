@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Video Player</title>
+		<link rel="stylesheet" href="css/styles.css" />
+		<script
+			defer
+			src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
+		></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<h1>Custom Video Player</h1>
+			</header>
+			<div class="player-wrapper">
+				<div class="player">
+					<video
+						src="https://player.vimeo.com/external/194837908.sd.mp4?s=c350076905b78c67f74d7ee39fdb4fef01d12420&profile_id=164"
+						class="player__video viewer"
+					></video>
+					<div class="player__controls">
+						<div class="progress">
+							<div class="progress__filled"></div>
+						</div>
+						<button class="player__button toggle" title="toggle pLay">
+							<i class="fas fa-play"></i>
+						</button>
+						<button class="player__button stop" title="stop">
+							<i class="fas fa-stop"></i>
+						</button>
+						<button
+							data-skip="-25"
+							class="player__button"
+							title="skip backward"
+						>
+							<< 25s
+						</button>
+						<button
+							data-skip="-10"
+							class="player__button"
+							title="skip backward"
+						>
+							<< 10s
+						</button>
+						<button data-skip="10" class="player__button" title="skip forward">
+							10s >>
+						</button>
+						<button data-skip="25" class="player__button" title="skip forward">
+							25s >>
+						</button>
+						<button
+							class="player__button fullscreen__button"
+							title="fullscreen"
+						>
+							<i class="fas fa-expand"></i>
+						</button>
+					</div>
+				</div>
+				<div class="control__bars">
+					<div class="control__bars--volume">
+						<div class="volume" title="volume">
+							<div class="volume-bar">0.5</div>
+						</div>
+						<button class="player__button volumeBtn">
+							<i class="fas fa-volume-up"></i>
+						</button>
+					</div>
+					<div class="control__bars--playbackrate">
+						<div class="speed" title="playbackrate">
+							<div class="speed-bar">1x</div>
+						</div>
+						<button class="player__button playbackrateBtn">
+							<i class="fas fa-tachometer-alt"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			<footer class="footer">
+				<p class="footer__paragraph">Based on Challenge 11/28 #JavaScript30</p>
+			</footer>
+		</div>
+
+		<script src="js/script.js" defer></script>
+	</body>
+</html>

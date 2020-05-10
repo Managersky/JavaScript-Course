@@ -6,10 +6,6 @@ This is a list of my scripts written in JS/JQuery. Scripts made as part of the t
 
 Dynamic search input (AJAX) - challenge 6 #JS30
 
-## Todo App
-
-Very simple todo app in VanillaJS
-
 ## Array Methods
 
 List of array methods and how it's works - challenge 4 and 7 #JS30
@@ -110,6 +106,10 @@ Sort some array string variables without a/an/the - challenge 18 #JS30
 ## Sticky Navigation
 
 Some great effect with navigation bar - challenge 24 #JS30
+
+## Todo App
+
+Very simple todo app in VanillaJS
 
 ## Whack a Mole
 
