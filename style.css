@@ -3,4 +3,23 @@
 	grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
 	grid-gap: 10px;
 	background-color: #fff;
+	color: #444;
+}
+
+.projects-container .project {
+	background-color: #444;
+	border-radius: 5px;
+	padding: 20px;
+	font-size: 150%;
+	cursor: pointer;
+}
+
+.projects-container .project a {
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+}
+
+.projects-container .project a:hover {
+	color: rgb(235, 231, 11);
 }
