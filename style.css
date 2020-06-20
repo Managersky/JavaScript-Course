@@ -1,25 +1,182 @@
+/* fonts */
+@font-face {
+	font-family: 'Quicksand';
+	src: url('/Quicksand-Light.woff2') format('woff2'),
+		url('/Quicksand-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+/* reset & common styles */
+body,
+ul,
+h1,
+h2,
+h3,
+p,
+button,
+a,
+div {
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: 'Quicksand';
+	letter-spacing: 2px;
+	list-style-type: none;
+	text-decoration: none;
+}
+
 .projects-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
 	grid-gap: 10px;
-	background-color: #fff;
 	color: #444;
+	background: rgb(100, 0, 123);
+	background: radial-gradient(
+		circle,
+		rgba(100, 0, 123, 1) 0%,
+		rgba(62, 20, 86, 1) 100%
+	);
+
+	overflow: hidden;
 }
 
 .projects-container .project {
-	background-color: #444;
-	border-radius: 5px;
+	height: 200px;
+	background-color: transparent;
+	border: 3px solid white;
+	border-radius: 15px;
 	padding: 20px;
+	margin: 10px;
 	font-size: 150%;
 	cursor: pointer;
 }
 
 .projects-container .project a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
 	color: #fff;
 	text-decoration: none;
 	text-align: center;
 }
 
 .projects-container .project a:hover {
-	color: rgb(235, 231, 11);
+	color: transparent;
+}
+
+.ajax-searcher:hover {
+	background-image: url('Gifs/ajax-searcher.gif');
+	background-size: cover;
+}
+
+.click-drag-scroll-slider:hover {
+	background-image: url('Gifs/click-drag-scroll-slider.gif');
+	background-size: cover;
+}
+
+.colorful-brush-canvas:hover {
+	background-image: url('Gifs/colorful-brush-canvas.gif');
+	background-size: cover;
+}
+
+.control-CSS-variable:hover {
+	background-image: url('Gifs/control-CSS-variable.gif');
+	background-size: cover;
+}
+
+.countdown-clock:hover {
+	background-image: url('Gifs/countdown-clock.gif');
+	background-size: cover;
+}
+
+.drag-drop-swap:hover {
+	background-image: url('Gifs/drag-drop-swap.gif');
+	background-size: cover;
+}
+
+.Drum-Kit:hover {
+	background-image: url('Gifs/Drum-Kit.gif');
+	background-size: cover;
+}
+
+.Flex-Gallery:hover {
+	background-image: url('Gifs/Flex-Gallery.gif');
+	background-size: cover;
+}
+
+.Follow-Along-Link-Highlighter:hover {
+	background-image: url('Gifs/Follow-Along-Link-Highlighter.gif');
+	background-size: cover;
+}
+
+.Follow-Along-Navigation:hover {
+	background-image: url('Gifs/Follow-Along-Navigation.gif');
+	background-size: cover;
+}
+
+.HTML5-Video-Player:hover {
+	background-image: url('Gifs/HTML5-Video-Player.gif');
+	background-size: cover;
+}
+
+.Image-Filter-Web-App:hover {
+	background-image: url('Gifs/Image-Filter-Web-App.gif');
+	background-size: cover;
+}
+
+.Impossible-CSS-Layout:hover {
+	background-image: url('Gifs/Impossible-CSS-Layout.gif');
+	background-size: cover;
+}
+
+.JS-Clock:hover {
+	background-image: url('Gifs/JS-Clock.gif');
+	background-size: cover;
+}
+
+.LocalStorage-EventDelegation:hover {
+	background-image: url('Gifs/LocalStorage-EventDelegation.gif');
+	background-size: cover;
+}
+
+.MouseMove-Text-Shadow:hover {
+	background-image: url('Gifs/MouseMove-Text-Shadow.gif');
+	background-size: cover;
+}
+
+.Ping-Pong-Game:hover {
+	background-image: url('Gifs/Ping-Pong-Game.gif');
+	background-size: cover;
+}
+
+.Slide-Scroll:hover {
+	background-image: url('Gifs/Slide-Scroll.gif');
+	background-size: cover;
+}
+
+.Slider:hover {
+	background-image: url('Gifs/Slider.gif');
+	background-size: cover;
+}
+
+.Smooth-Scroll:hover {
+	background-image: url('Gifs/Smooth-Scroll.gif');
+	background-size: cover;
+}
+
+.Sticky-Navigation:hover {
+	background-image: url('Gifs/Sticky-Navigation.gif');
+	background-size: cover;
+}
+
+.Todo-App:hover {
+	background-image: url('Gifs/Todo-App.gif');
+	background-size: cover;
+}
+
+.Whack-A-Mole:hover {
+	background-image: url('Gifs/Whack-A-Mole.gif');
+	background-size: cover;
 }
