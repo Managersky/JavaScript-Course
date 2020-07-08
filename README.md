@@ -117,4 +117,4 @@ Very simple todo app in VanillaJS
 
 ## Whack a Mole
 
-Mini game in vanilla JS - challenge 30 #JS30
+Mini game in vanilla JS + NW.js (Desktop App) - challenge 30 #JS30
